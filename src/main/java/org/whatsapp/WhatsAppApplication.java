@@ -2,7 +2,7 @@ package org.whatsapp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.whatsapp.Service.ClimaService;
+import org.whatsapp.Service.WeatherService;
 
 
 @SpringBootApplication
@@ -65,8 +65,8 @@ public class WhatsAppApplication {
 //
 //		};
 //		scheduler.scheduleAtFixedRate(task1, 0, 30, TimeUnit.SECONDS);
-		ClimaService climaService = new ClimaService();
-		String mensaje = climaService.obtenerClima("Madrid");
+		WeatherService weatherService = new WeatherService();
+		String mensaje = weatherService.getWeather("Madrid");
 		System.out.println(mensaje);
 }
 }

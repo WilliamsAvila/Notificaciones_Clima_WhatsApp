@@ -1,4 +1,4 @@
-package org.whatsapp;
+package org.whatsapp.Service;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;

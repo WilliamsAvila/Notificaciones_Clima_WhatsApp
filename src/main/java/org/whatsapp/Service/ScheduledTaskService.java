@@ -2,7 +2,10 @@ package org.whatsapp.Service;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-/* Servicio que */
+/* El servicio ScheduledTaskService se inyecta los servicio WeatherService y
+* TwilioService para enviar el mensaje del clima con el @Scheduled cada 3 segundos,
+* esto ultimo se puede configurar en el intervalo de tiempo que se quiera enviar
+* el mensaje.   */
 @Service
 public class ScheduledTaskService {
 
@@ -13,6 +16,9 @@ public class ScheduledTaskService {
         this.weatherService = weatherService;
         this.twilioService = twilioService;
     }
+
+
+    // Método para enviar el mensaje cada 3 segundos.
     @Scheduled(fixedRate = 3000)
     public void enviarMensajeClima() {
         System.out.println("Tarea ejecutada...");

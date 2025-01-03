@@ -67,7 +67,7 @@ public class WhatsAppApplication {
 //		scheduler.scheduleAtFixedRate(task1, 0, 30, TimeUnit.SECONDS);
 		WeatherService weatherService = new WeatherService();
 		String mensaje = weatherService.getWeather("Madrid");
-		System.out.println(mensaje);
+//		System.out.println(mensaje);
 }
 }
 

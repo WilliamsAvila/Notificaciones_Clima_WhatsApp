@@ -19,7 +19,7 @@ public class ScheduledTaskService {
 
 
     // Método para enviar el mensaje cada 3 segundos.
-    @Scheduled(fixedRate = 3000)
+    @Scheduled(fixedRate = 10000)
     public void enviarMensajeClima() {
         System.out.println("Tarea ejecutada...");
         try {

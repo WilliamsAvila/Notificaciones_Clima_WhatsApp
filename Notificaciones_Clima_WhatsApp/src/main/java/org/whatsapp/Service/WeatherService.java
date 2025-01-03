@@ -35,7 +35,8 @@ public class WeatherService {
         JSONObject current = respondJson.getJSONObject("current");
         double temp_c = current.getDouble("temp_c");
 
-        return "Hola en " + name + ", " + region + ", " + country + " hace " + temp_c + " ºC";
+         return String.format("Hola en %s, %s, %s, hace %.1f ºC", name, region, country, temp_c);
+//        return "Hola en " + name + ", " + region + ", " + country + " hace " + temp_c + " ºC";
     }
 
 }

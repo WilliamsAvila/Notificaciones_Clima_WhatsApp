@@ -12,11 +12,11 @@ import org.springframework.stereotype.Service;
 public class TwilioService {
 
     //Dato suministrado por la cuenta de Twilio
-    @Value("${ACCOUNT_SID}")
+
     private String accountSid;
 
     //Dato suministrado por la cuenta de Twilio
-    @Value("${TOKEN_WHATSAPP}")
+
     private String authToken;
 
     // Número de Whatsapp que te proporsiona Twilio para enviar cualquier mensaje gratuito

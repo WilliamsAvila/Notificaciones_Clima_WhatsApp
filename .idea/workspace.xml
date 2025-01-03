@@ -96,8 +96,8 @@
     <configuration name="WhatsAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="SCHEDULED_DEBUGGER" value="true" />
       <envs>
-        <env name="TOKEN_WHATSAPP" value="2849e1e207553075c6c93660f1d0ea16" />
-        <env name="ACCOUNT_SID" value="AC7612c59b1e6ef99d5af9a43a2ba6e501" />
+        <env name="TOKEN_WHATSAPP" value="" />
+        <env name="ACCOUNT_SID" value="" />
       </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="WhatsApp" />

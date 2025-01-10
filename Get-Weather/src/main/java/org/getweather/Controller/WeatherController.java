@@ -35,7 +35,7 @@ public class WeatherController {
 //        } else {
 //            return ResponseEntity.notFound().build();
 //        }
-        String findWeatherMessage = weatherService.getWeatherMessage(city);
+        var findWeatherMessage = weatherService.getWeatherMessage(city);
         if (findWeatherMessage != null) {
             return ResponseEntity.ok(findWeatherMessage);
         } else {

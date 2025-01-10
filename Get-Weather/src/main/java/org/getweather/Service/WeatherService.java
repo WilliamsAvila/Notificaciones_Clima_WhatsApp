@@ -2,6 +2,10 @@ package org.getweather.Service;
 import org.springframework.stereotype.Service;
 
 @Service
+/*
+* Servicio que implementa los otros dos servicios para unificar los metodos y obtener un
+* mensaje personalizado para utilizarlo en un endpoint esto ayuda a la escalabilidad del
+* proyecto */
 public class WeatherService {
 
     private final JsonToMessageService jsonToMessageService;

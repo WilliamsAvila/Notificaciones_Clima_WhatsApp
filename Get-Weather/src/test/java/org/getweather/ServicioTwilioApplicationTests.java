@@ -1,4 +1,4 @@
-package org.serviciotwilio;
+package org.getweather;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -14,14 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class WeatherController {
 
 
-    @Autowired
-    private WeatherService weatherService;
+    /*
+    * Si colocamos el @Autowired no es necesario colocar final en la inyección de la clase
+    * Y ádemas no es necesario crear un constructor pero tendriamos warnings en la parte
+    * derecha superior */
+    private final WeatherService weatherService;
 
-//    private final WeatherService weatherService;
-//
-//    public WeatherController(WeatherService weatherService) {
-//        this.weatherService = weatherService;
-//    }
+    public WeatherController(WeatherService weatherService) {
+        this.weatherService = weatherService;
+    }
 
 
     @GetMapping("/getWeather/{city}")

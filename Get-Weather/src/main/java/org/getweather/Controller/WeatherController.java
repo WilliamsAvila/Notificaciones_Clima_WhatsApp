@@ -28,15 +28,8 @@ public class WeatherController {
     @GetMapping("/getWeather/{city}")
     public ResponseEntity<String> getWeather(@PathVariable String city)  {
 
-//        var findWeather = weatherService.getWeatherCity(city);
-//        var findMessage = weatherService.getMessage(findWeather);
-//        if (findMessage != null) {
-//            return ResponseEntity.ok(findMessage);
-//        } else {
-//            return ResponseEntity.notFound().build();
-//        }
         var findWeatherMessage = weatherService.getWeatherMessage(city);
-        if (findWeatherMessage != null) {
+        if (findWeatherMessage != null ) {
             return ResponseEntity.ok(findWeatherMessage);
         } else {
             return ResponseEntity.notFound().build();

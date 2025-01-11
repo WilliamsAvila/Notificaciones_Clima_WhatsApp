@@ -21,8 +21,10 @@ public class WeatherService {
         String responseBody = getWeatherApiService.getWeatherCity(city);
         if (responseBody.contains("Error")){
             return "Error al obtener el clima: " + responseBody;
+        } else {
+            return jsonToMessageService.getMessage(responseBody);
         }
-        return jsonToMessageService.getMessage(responseBody);
+
     }
 
 

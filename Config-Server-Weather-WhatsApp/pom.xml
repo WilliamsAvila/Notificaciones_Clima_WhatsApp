@@ -37,8 +37,8 @@ versiones actualizadas, si inyectas manualmente la dependencia asegúrate
 que esté habilitada para la version de Java y Spring Boot que vayas a utilizar
 
 Dependencias:
--Config Server
--Eureka Discovery Client
+-Config Server (se utuliza para gestionar todas las configuraciones de los micro-servicios en la nube en este caso en github)
+-Eureka Discovery Client (se utiliza más que nada en micro-servicios para que se puedan enlazar entre sí)
 -->
 
 	<dependencies>

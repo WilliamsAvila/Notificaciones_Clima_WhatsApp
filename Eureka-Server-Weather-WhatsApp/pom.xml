@@ -37,8 +37,8 @@ versiones actualizadas, si inyectas manualmente la dependencia asegúrate
 que esté habilitada para la version de Java y Spring Boot que vayas a utilizar
 
 Dependencias:
--Eureka Server
--Devtools
+-Eureka Server (se utiliza para gestionar un servicio para el descubrimiento de los micro-servicio, como un enlace para la comunicación y conexión de ellos)
+-Spring Boot DevTools (es util para evitar el reiniciar la aplicación, este lo hace por sí solo al hacer cualquier cambio)
 "que solo se necesita Eureka Server y DevTools"
 -->
 

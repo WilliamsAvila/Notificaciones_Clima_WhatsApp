@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UsuarioPhon {
+public class UserPhon {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

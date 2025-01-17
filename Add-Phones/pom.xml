@@ -43,7 +43,7 @@
     -Eureka Discovery Client (se utiliza más que nada en micro-servicios para que se puedan enlazar entre sí)
     -Spring Boot starter web (se utiliza para crear aplicaciones web basadas en el framework spring MVC)
     -Spring Boot DevTools (es util para evitar el reiniciar la aplicación, este lo hace por sí solo al hacer cualquier cambio)
-
+    -Spring Data JPA (se utiliza para integrar funcionalidades necesarias para trabajar con base de datos relacionales)
     -->
     <dependencies>
         <dependency>

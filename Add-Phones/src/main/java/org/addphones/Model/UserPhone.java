@@ -13,12 +13,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UserPhon {
+public class UserPhone {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String numeroPhone;
+    private String numberPhone;
     private String city;
 }

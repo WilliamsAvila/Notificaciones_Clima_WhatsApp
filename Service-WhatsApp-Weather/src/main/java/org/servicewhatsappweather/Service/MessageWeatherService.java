@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MessageWeatherService {
 
@@ -17,20 +19,21 @@ public class MessageWeatherService {
     private TwilioService twilioService;
 
 
-    // Método para enviar el mensaje cada 3 segundos.
-    @Scheduled(fixedRate = 10000)
+    // Método para enviar el mensaje cada 20 segundos.
+    @Scheduled(fixedRate = 20000)
     public void enviarMensajeClima() {
         System.out.println("Tarea ejecutada...");
         try {
-            // Obtener el clima de la ciudad
-//            String clima = weatherService.getWeather("Madrid");
             String clima = getWeatherService.getWeather("Madrid");
-//            String Mensaje = weatherService.getMessage(clima);
+            List<String> numbersPhones = getPhonesService.getAllPhones();
 
 
-            // Enviar el mensaje por WhatsApp
-            twilioService.enviarMensaje(clima);
+            for (String number : numbersPhones) {
+                // Enviar el mensaje por WhatsApp
+                twilioService.enviarMensaje(number, clima);
+            }
 
+            
         } catch (Exception e) {
             e.printStackTrace();
         }

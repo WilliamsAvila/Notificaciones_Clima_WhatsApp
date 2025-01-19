@@ -32,12 +32,12 @@ public class TwilioService {
     * 2do el número de whatsapp que te proporciona Twilio que donde se enviara el mensaje (PhoneNumber(fromNumber)
     * 3ro el mensaje (mensaje)
     * */
-    public void enviarMensaje(String mensaje) {
+    public void enviarMensaje(String number, String clima) {
         Twilio.init(accountSid, authToken);
         Message message = Message.creator(
-                new PhoneNumber("whatsapp:+34642318353"),
+                new PhoneNumber("whatsapp:+34"+number),
                 new PhoneNumber(fromNumber),
-                mensaje
+                clima
         ).create();
     }
 }

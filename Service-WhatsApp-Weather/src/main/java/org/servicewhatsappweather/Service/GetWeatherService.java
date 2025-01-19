@@ -11,7 +11,7 @@ public class GetWeatherService {
     @Autowired
     private GetWeatherRepository getWeatherRepository;
 
-    public String getWeather() {
-        return getWeatherRepository.getWeather("Madrid");
+    public String getWeather(String city) {
+        return getWeatherRepository.getWeather(city);
     }
 }

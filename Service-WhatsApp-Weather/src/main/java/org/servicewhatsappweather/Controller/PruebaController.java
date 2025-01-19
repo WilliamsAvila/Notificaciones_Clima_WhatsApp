@@ -1,6 +1,7 @@
 package org.servicewhatsappweather.Controller;
 
 import org.servicewhatsappweather.Repository.GetPhonesRepository;
+import org.servicewhatsappweather.Service.GetPhonesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,11 +13,12 @@ import java.util.List;
 @RequestMapping("/Service-Get")
 public class PruebaController {
 
-    private GetPhonesRepository getPhonesRepository;
+    @Autowired
+    private GetPhonesService getPhonesService;
 
 
     @GetMapping("/GetAllNumbers")
     public List<String> getAllNumbers() {
-        return getPhonesRepository.getAllNumbers();
+        return getPhonesService.getAllPhones();
     }
 }

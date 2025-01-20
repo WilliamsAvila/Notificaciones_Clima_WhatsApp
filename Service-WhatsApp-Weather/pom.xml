@@ -30,6 +30,22 @@
         <java.version>21</java.version>
         <spring-cloud.version>2024.0.0</spring-cloud.version>
     </properties>
+
+    <!--
+    Según la versión de Java hay que implementar las dependencias con las
+    versiones actualizadas, si inyectas manualmente la dependencia asegúrate
+    que esté habilitada para la version de Java y Spring Boot que vayas a utilizar
+
+    Dependencias:
+    -Config Server client (se utiliza para centralizar tola la configuración en la nube en este caso en github)
+    -Spring Boot Actuator (se utiliza para el monitoreo de y gestión del proyecto, tiene por defecto varios endpoints para supervisar el estado)
+    -Eureka Discovery Client (se utiliza más que nada en micro-servicios para que se puedan enlazar entre sí)
+    -Spring Boot starter web (se utiliza para crear aplicaciones web basadas en el framework spring MVC)
+    -Spring Boot DevTools (es util para evitar el reiniciar la aplicación, este lo hace por sí solo al hacer cualquier cambio)
+    -Lombok (es una librería que se utiliza para reducir la cantidad de código repetitivo en Java)
+    -OpenFeign (para este proyecto es primordial agregar esta dependencia ya qué es utilizada para facilitar la creación de clientes y la comunicación entre micro-servicio)
+    -Twilio (ofrece un servicio para la mensajería de texto por Whats-App)
+    -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

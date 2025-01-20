@@ -5,9 +5,9 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-/*
-* Servicio que implementa un metodo que obtiene en JSON toda la información climática
-* de una region desde una API gratuita (WeatherAPI) */
+/* Servicio que implementa un metodo que obtiene en JSON toda la información climática
+ * de una region desde una API gratuita (WeatherAPI)
+ */
 @Service
 public class GetWeatherApiService {
     private static final String API_KEY = "124f9aa032d44af390e205240241712";

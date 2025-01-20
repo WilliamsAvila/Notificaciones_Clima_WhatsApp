@@ -3,8 +3,9 @@ package org.getweather.Service;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 /*
-* Servicio que transforma un JSON obtenido de una solicitud de una api en este caso de WeatherAPI y lo
-* transforma en un mensaje personalizado filtrando solo Ciudad, Region, Pais y la Temperatura */
+ * Servicio que transforma un JSON obtenido de una solicitud de una api en este caso de WeatherAPI y lo
+ * transforma en un mensaje personalizado filtrando solo Ciudad, Region, Pais y la Temperatura
+ */
 @Service
 public class JsonToMessageService {
 

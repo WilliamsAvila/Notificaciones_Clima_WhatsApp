@@ -11,7 +11,7 @@ import java.util.List;
 public interface UserPhoneRepository extends JpaRepository <UserPhone, Long> {
 
     @Query("SELECT numberPhone FROM UserPhone")
-    List<String> findAllNumberPhone();
+    List<Integer> findAllNumberPhone();
 
 
 }

@@ -1,7 +1,7 @@
 package org.addphones.Controller;
 
+import jakarta.validation.Valid;
 import org.addphones.Model.UserPhone;
-import org.addphones.Repository.UserPhoneRepository;
 import org.addphones.Service.NumberService;
 import org.apache.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,19 +15,16 @@ import java.util.List;
 public class NumberController {
 
     @Autowired
-    private UserPhoneRepository userPhoneRepository;
-
-    @Autowired
     private NumberService numberService;
 
 
     @GetMapping("/AllNumbers")
-    public List<String> AllNumbers() {
-        return userPhoneRepository.findAllNumberPhone();
+    public List<Integer> AllNumbers() {
+        return numberService.findAllNumbersPhone();
     }
 
     @PostMapping("/AddNumbers")
-    public ResponseEntity<String> AddNumbers(@RequestBody UserPhone userPhone) {
+    public ResponseEntity<String> AddNumbers(@Valid @RequestBody UserPhone userPhone) {
         return ResponseEntity.status(HttpStatus.SC_CREATED).body(numberService.AddNumber(userPhone));
     }
 }

@@ -46,6 +46,7 @@
     -Spring Data JPA (se utiliza para integrar funcionalidades necesarias para trabajar con base de datos relacionales)
     -Lombok (es una librería que se utiliza para reducir la cantidad de código repetitivo en Java)
     -MySQL Connector (es un driver que permite que las aplicaciones java se conecten y se comuniquen con la base de datos)
+    -Starter-Validation (es utilizada en este proyecto para la validación de los números de teléfono recibidos)
     -->
     <dependencies>
         <dependency>

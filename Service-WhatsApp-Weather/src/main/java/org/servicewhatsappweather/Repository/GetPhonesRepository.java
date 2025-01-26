@@ -9,5 +9,5 @@ import java.util.List;
 public interface GetPhonesRepository {
 
     @GetMapping("/GetNumber/AllNumbers")
-    List<String> getAllNumbers();
+    List<Object> getAllNumbers();
 }

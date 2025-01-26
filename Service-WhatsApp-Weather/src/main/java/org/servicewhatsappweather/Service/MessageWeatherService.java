@@ -5,6 +5,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class MessageWeatherService {
@@ -24,16 +25,31 @@ public class MessageWeatherService {
     public void enviarMensajeClima() {
         System.out.println("Tarea ejecutada...");
         try {
-            String clima = getWeatherService.getWeather("Madrid");
-            List<String> numbersPhones = getPhonesService.getAllPhones();
+            List<Object> listsNumbersCities = getPhonesService.getAllPhones();
+            for (Object number : listsNumbersCities) {
+                Object[] numberCityArray = (Object[]) number;
+
+                String numero = String.valueOf(numberCityArray[0]);
+                String ciudad = String.valueOf(numberCityArray[1]);
+//                String clima = getWeatherService.getWeather(ciudad);
+//                twilioService.enviarMensaje(numero, clima);
+                System.out.println(ciudad +" "+ numero);
 
 
-            for (String number : numbersPhones) {
-                // Enviar el mensaje por WhatsApp
-                twilioService.enviarMensaje(number, clima);
             }
 
-            
+
+
+//            String clima = getWeatherService.getWeather("Madrid");
+//            List<Object> numbersPhones = getPhonesService.getAllPhones();
+//
+//
+//            for (String number : numbersPhones) {
+//                // Enviar el mensaje por WhatsApp
+//                twilioService.enviarMensaje(number, clima);
+//            }
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }

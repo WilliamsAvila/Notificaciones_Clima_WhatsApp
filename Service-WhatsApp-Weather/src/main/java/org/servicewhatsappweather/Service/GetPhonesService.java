@@ -12,7 +12,7 @@ public class GetPhonesService {
     @Autowired
     private GetPhonesRepository getPhonesRepository;
 
-    public List<String> getAllPhones(){
+    public List<Object> getAllPhones(){
         return getPhonesRepository.getAllNumbers();
     }
 

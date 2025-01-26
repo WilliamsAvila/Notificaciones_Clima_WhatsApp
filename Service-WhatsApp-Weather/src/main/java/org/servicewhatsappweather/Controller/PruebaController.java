@@ -23,7 +23,7 @@ public class PruebaController {
 
 
     @GetMapping("/GetAllNumbers")
-    public List<String> getAllNumbers() {
+    public List<Object> getAllNumbers() {
         return getPhonesService.getAllPhones();
     }
 

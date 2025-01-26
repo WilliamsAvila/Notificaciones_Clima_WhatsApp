@@ -12,7 +12,7 @@ import java.util.List;
 public interface UserPhoneRepository extends JpaRepository <UserPhone, Long> {
 
     @Query("SELECT new org.addphones.DTO.UserPhoneDTO(numberPhone, city) FROM UserPhone")
-    List<UserPhoneDTO> findAllNumberPhone();
+    List<Object> findAllNumberPhone();
 
 
 }

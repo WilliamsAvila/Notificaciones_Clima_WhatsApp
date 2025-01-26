@@ -23,7 +23,7 @@ public class NumberService {
         }
     }
 
-    public List<UserPhoneDTO> findAllNumbersPhone (){
+    public List<Object> findAllNumbersPhone (){
         return userPhoneRepository.findAllNumberPhone();
     }
 }

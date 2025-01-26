@@ -20,7 +20,7 @@ public class NumberController {
 
 
     @GetMapping("/AllNumbers")
-    public List<UserPhoneDTO> AllNumbers() {
+    public List<Object> AllNumbers() {
         return numberService.findAllNumbersPhone();
     }
 

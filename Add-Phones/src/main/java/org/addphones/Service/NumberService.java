@@ -1,5 +1,6 @@
 package org.addphones.Service;
 
+import org.addphones.DTO.UserPhoneDTO;
 import org.addphones.Model.UserPhone;
 import org.addphones.Repository.UserPhoneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class NumberService {
         }
     }
 
-    public List<Integer> findAllNumbersPhone (){
+    public List<UserPhoneDTO> findAllNumbersPhone (){
         return userPhoneRepository.findAllNumberPhone();
     }
 }

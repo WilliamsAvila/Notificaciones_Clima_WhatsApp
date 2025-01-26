@@ -1,6 +1,7 @@
 package org.addphones.Controller;
 
 import jakarta.validation.Valid;
+import org.addphones.DTO.UserPhoneDTO;
 import org.addphones.Model.UserPhone;
 import org.addphones.Service.NumberService;
 import org.apache.http.HttpStatus;
@@ -19,7 +20,7 @@ public class NumberController {
 
 
     @GetMapping("/AllNumbers")
-    public List<Integer> AllNumbers() {
+    public List<UserPhoneDTO> AllNumbers() {
         return numberService.findAllNumbersPhone();
     }
 

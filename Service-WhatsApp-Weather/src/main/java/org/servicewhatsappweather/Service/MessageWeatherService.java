@@ -27,29 +27,19 @@ public class MessageWeatherService {
         try {
             List<Object> listsNumbersCities = getPhonesService.getAllPhones();
             for (Object number : listsNumbersCities) {
-                Object[] numberCityArray = (Object[]) number;
+                if (number instanceof Map) {
+                    Map<String, Object> contacto = (Map<String, Object>) number;
 
-                String numero = String.valueOf(numberCityArray[0]);
-                String ciudad = String.valueOf(numberCityArray[1]);
-//                String clima = getWeatherService.getWeather(ciudad);
-//                twilioService.enviarMensaje(numero, clima);
-                System.out.println(ciudad +" "+ numero);
+                    Integer phone = (Integer) contacto.get("numberPhone");
+                    String city = (String) contacto.get("city");
 
+
+                    String clima = getWeatherService.getWeather(city);
+                    twilioService.enviarMensaje(String.valueOf(phone), clima);
+                    System.out.println(phone +" "+ city);
+                }
 
             }
-
-
-
-//            String clima = getWeatherService.getWeather("Madrid");
-//            List<Object> numbersPhones = getPhonesService.getAllPhones();
-//
-//
-//            for (String number : numbersPhones) {
-//                // Enviar el mensaje por WhatsApp
-//                twilioService.enviarMensaje(number, clima);
-//            }
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }

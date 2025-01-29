@@ -3,6 +3,7 @@ package org.servicewhatsappweather.Controller;
 import org.servicewhatsappweather.Repository.GetPhonesRepository;
 import org.servicewhatsappweather.Repository.GetWeatherRepository;
 import org.servicewhatsappweather.Service.GetPhonesService;
+import org.servicewhatsappweather.Service.GetWeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +20,7 @@ public class PruebaController {
     private GetPhonesService getPhonesService;
 
     @Autowired
-    private GetWeatherRepository getWeatherRepository;
+    private GetWeatherService getWeatherService;
 
 
     @GetMapping("/GetAllNumbers")
@@ -29,6 +30,6 @@ public class PruebaController {
 
     @GetMapping("/GetWeather/{city}")
     public String getWeather (@PathVariable String city){
-        return getWeatherRepository.getWeather(city);
+        return getWeatherService.getWeather(city);
     }
 }

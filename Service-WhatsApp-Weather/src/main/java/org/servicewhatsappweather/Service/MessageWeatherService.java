@@ -35,8 +35,9 @@ public class MessageWeatherService {
 
 
                     String clima = getWeatherService.getWeather(city);
-                    twilioService.enviarMensaje(String.valueOf(phone), clima);
-                    System.out.println(phone +" "+ city);
+//                    twilioService.enviarMensaje(String.valueOf(phone), clima);
+
+                    System.out.println(phone +" "+ clima);
                 }
 
             }

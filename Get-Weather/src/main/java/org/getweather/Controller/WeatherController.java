@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Objects;
+
+import static org.springframework.web.servlet.function.ServerResponse.notFound;
+
 /* Este controlador se utiliza pra la comprobación de la obtención del clima, ádemas que habilita
  * Los end-point para la comunicación entre micro-servicios
  */
@@ -27,14 +31,10 @@ public class WeatherController {
 
 
     @GetMapping("/getWeather/{city}")
-    public ResponseEntity<String> getWeather(@PathVariable String city)  {
+    public String getWeather(@PathVariable String city)  {
 
-        var findWeatherMessage = weatherService.getWeatherMessage(city);
-        if (findWeatherMessage != null ) {
-            return ResponseEntity.ok(findWeatherMessage);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+        String findWeatherMessage = weatherService.getWeatherMessage(city);
+        return Objects.requireNonNullElse(findWeatherMessage, "Not Found");
 
     }
 }
